@@ -39,23 +39,17 @@ const Navbar = () => {
             onClick={() => setOpen((prev) => !prev)}
           >
             {open ? <AiOutlineClose /> : <HiMenu />}
-          </button>
-          <div className={`${open ? "block" : "hidden"}`}>
-            <nav className="font-bold bg-black gap-4 md:gap-6 md:text-xl text-base md:flex flex-col">
-              <Link to={"home"} className="text-white">
-                Home
-              </Link>
-              <Link to={"recipe"} className="text-white">
-                Explore
-              </Link>
-              <Link to={"favorites"} className="text-white">
-                Favorites
-              </Link>
-              <Link to={"signup"} className="text-white">
-                Signup
-              </Link>
+            <nav
+              className={`  font-bold bg-black gap-4 md:gap-6 md:text-xl text-base md:flex ${
+                open ? "block" : "hidden"
+              }`}
+            >
+              <Link to={"home"}>Home</Link>
+              <Link to={"recipe"}>Explore</Link>
+              <Link to={"favorites"}>Favorites</Link>
+              <Link to={"signup"}>Signup</Link>
             </nav>
-          </div>
+          </button>
         </div>
       </div>
     </header>
